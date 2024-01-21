@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sebha.Sebha"
+    android:background="@drawable/main_background"
+    >
+    <TextView
+        android:id="@+id/appBarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/islami"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/semibold"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/head_sebha_IMG"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/head_sebha_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/appBarTitle"
+        app:layout_constraintTop_toBottomOf="@id/appBarTitle"
+        app:layout_constraintHorizontal_bias=".1"
+        />
+
+    <ImageView
+        android:id="@+id/body_sebha_IMG"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="-21dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="sebhaOnClick"
+        android:src="@drawable/body_sebha_logo"
+        app:layout_constraintEnd_toEndOf="@id/head_sebha_IMG"
+        app:layout_constraintHorizontal_bias=".69"
+        app:layout_constraintStart_toStartOf="@id/head_sebha_IMG"
+        app:layout_constraintTop_toBottomOf="@id/head_sebha_IMG" />
+
+    <TextView
+        android:id="@+id/tasbehat_counter_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tasbehat_number"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/semibold"
+        app:layout_constraintTop_toBottomOf="@id/body_sebha_IMG"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/tasbehat_number_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="30"
+        app:layout_constraintTop_toBottomOf="@id/tasbehat_counter_TV"
+        app:layout_constraintStart_toStartOf="@id/tasbehat_counter_TV"
+        app:layout_constraintEnd_toEndOf="@id/tasbehat_counter_TV"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:padding="15dp"
+        android:background="@drawable/cicular_background_for_number"
+        />
+    <TextView
+        android:id="@+id/azkar_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="سبحان الله"
+        app:layout_constraintTop_toBottomOf="@id/tasbehat_number_TV"
+        app:layout_constraintStart_toStartOf="@id/tasbehat_number_TV"
+        app:layout_constraintEnd_toEndOf="@id/tasbehat_number_TV"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:background="@drawable/circular_background_for_zikr"
+
+        />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Islami</string>
+    <string name="islami">اسلامي</string>
+    <string name="tasbehat_number">عدد التسبيحات</string>
+    <string-array name="azkar">
+        <item>سبحان الله</item>
+        <item>الله اكبر</item>
+    </string-array>
+</resources>
