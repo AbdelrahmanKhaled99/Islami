@@ -5,10 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.example.islami.R
 import com.example.islami.databinding.ActivitySplashBinding
-import com.example.islami.home.HomeActivity
-import com.example.islami.sebha.Sebha
+import com.example.islami.fragments.fragments.HomeActivity
 
 class SplashActivity : AppCompatActivity() {
     lateinit var binding: ActivitySplashBinding
@@ -22,10 +20,10 @@ class SplashActivity : AppCompatActivity() {
 
     private fun startHomeScreen() {
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent : Intent = Intent(this , Sebha :: class.java)
+            val intent : Intent = Intent(this , HomeActivity :: class.java)
             startActivity(intent)
             finish()
-        } , 2000)
+        } , 500)
 
 
     }
