@@ -65,13 +65,46 @@ class SebhaFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentSebhaBinding.inflate(inflater , container , false)
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.azkarTV.text = azkarList[0]
+        sebhaOnClick()
     }
 
+    private fun sebhaOnClick() {
+        var counter = 0
+        binding.tasbehatNumberTV.text = counter.toString()
 
+        binding.bodySebhaIMG.setOnClickListener {
+            counter++
+            binding.tasbehatNumberTV.text = counter.toString()
+            changeAzkar(counter)
+            moveSebha()
+        }
+    }
+
+    private fun moveSebha() {
+        val currentRotation = binding.bodySebhaIMG.rotation
+        val newRotation = currentRotation + 15f
+
+        val rotationAnimator = ObjectAnimator.ofFloat(
+            binding.bodySebhaIMG,
+            View.ROTATION,
+            currentRotation,
+            newRotation
+        )
+        rotationAnimator.duration = 250
+        rotationAnimator.start()
+    }
+
+    private fun changeAzkar(counter: Int) {
+        if (counter % 33 == 0) {
+            val index = (counter / 33) % azkarList.size
+            binding.azkarTV.text = azkarList[index]
+        }
+    }
 }
