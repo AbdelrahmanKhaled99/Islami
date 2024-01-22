@@ -1,17 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.fragments.sebha.SebhaFragment"
-    android:background="#C65C5C"
+    android:background="@drawable/main_background"
+    tools:context=".fragments.fragments.sebha.Sebha">
 
-    >
+    <ImageView
+        android:id="@+id/head_sebha_IMG"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/head_sebha_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/body_sebha_IMG"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="-21dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="sebhaOnClick"
+        android:src="@drawable/body_sebha_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/head_sebha_IMG" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tasbehat_counter_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/semibold"
+        android:text="@string/tasbehat_number"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/body_sebha_IMG" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tasbehat_number_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/cicular_background_for_number"
+        android:padding="15dp"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@id/tasbehat_counter_TV"
+        app:layout_constraintStart_toStartOf="@id/tasbehat_counter_TV"
+        app:layout_constraintTop_toBottomOf="@id/tasbehat_counter_TV"
+        tools:text="30" />
+
+    <TextView
+        android:id="@+id/azkar_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circular_background_for_zikr"
+        android:padding="10dp"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@id/tasbehat_number_TV"
+        app:layout_constraintStart_toStartOf="@id/tasbehat_number_TV"
+        app:layout_constraintTop_toBottomOf="@id/tasbehat_number_TV"
+        tools:text="سبحان الله"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
