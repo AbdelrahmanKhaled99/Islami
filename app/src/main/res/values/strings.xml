@@ -2,8 +2,13 @@
     <string name="app_name">Islami</string>
     <string name="islami">اسلامي</string>
     <string name="tasbehat_number">عدد التسبيحات</string>
+    <string name="quran">قرأن</string>
+    <string name="ahadeth">احاديث</string>
+    <string name="sebha">السبحة</string>
+    <string name="radio">الراديو</string>
     <string-array name="azkar">
         <item>سبحان الله</item>
         <item>الله اكبر</item>
     </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

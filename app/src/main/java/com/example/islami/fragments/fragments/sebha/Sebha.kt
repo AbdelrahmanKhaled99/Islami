@@ -1,4 +1,4 @@
-package com.example.islami.sebha
+package com.example.islami.fragments.fragments.sebha
 
 import android.animation.ObjectAnimator
 import android.os.Bundle
