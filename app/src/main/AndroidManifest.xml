@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Islami"
         tools:targetApi="31">
         <activity
+            android:name=".fragments.fragments.ahadeth_details.AhadethDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name=".fragments.fragments.sura_details.SuraDetailsActivity"
             android:exported="false" />
         <activity
@@ -20,7 +23,7 @@
             android:exported="false" />
         <activity
             android:name=".fragments.fragments.HomeActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".splash.SplashActivity"
             android:exported="true">
