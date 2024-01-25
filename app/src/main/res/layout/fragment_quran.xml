@@ -13,12 +13,13 @@
         android:id="@+id/header_IMG"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/todo"
         android:src="@drawable/quran_screen_logo"
         app:layout_constraintHeight_percent=".25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="50dp"
-        />
+        tools:ignore="ImageContrastCheck" />
 
     <View
         android:id="@+id/top_line"

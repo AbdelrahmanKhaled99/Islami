@@ -8,10 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.example.islami.R
 
-class SuraNamesAdapter(var suraName: List<String>) : Adapter<SuraNamesAdapter.ViewHolder>() {
+class SuraNamesAdapter(private var suraName: List<String>) : Adapter<SuraNamesAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val suraNameTV = itemView.findViewById<TextView>(R.id.itemm_sura_name)
+        val suraNameTV: TextView = itemView.findViewById(R.id.itemm_sura_name)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

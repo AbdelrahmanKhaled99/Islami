@@ -1,20 +1,18 @@
 package com.example.islami.fragments.fragments.sura_details
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.example.islami.Constants
-import com.example.islami.R
 import com.example.islami.databinding.ActivitySuraDetailsBinding
 import java.io.BufferedReader
 import java.io.IOException
-import java.io.InputStream
 import java.io.InputStreamReader
 
 class SuraDetailsActivity : AppCompatActivity() {
-    lateinit var suraName: String
-    lateinit var fileName: String
-    lateinit var binding: ActivitySuraDetailsBinding
+    private lateinit var suraName: String
+    private lateinit var fileName: String
+    private lateinit var binding: ActivitySuraDetailsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySuraDetailsBinding.inflate(layoutInflater)
