@@ -13,12 +13,12 @@ import com.example.islami.fragments.fragments.sura_details.SuraDetailsActivity
 
 
 class QuranFragment : Fragment() {
-    lateinit var binding: FragmentQuranBinding
-    lateinit var suraNamesAdapter: SuraNamesAdapter
+    private lateinit var binding: FragmentQuranBinding
+    private lateinit var suraNamesAdapter: SuraNamesAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentQuranBinding.inflate(inflater, container, false)
         return binding.root
     }
